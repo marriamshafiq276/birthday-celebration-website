@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <style>
+    .booking-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+.booking-section h2 {
+    font-size: 2.5rem;
+    color: #db6504;
+    margin-bottom: 20px;
+}
+
+.booking-section p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #db6504;
+    outline: none;
+}
+
+.submit-button {
+    background: linear-gradient(to right, #db6504, #ff6f61);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.submit-button:hover {
+    background: linear-gradient(to right, #ff6f61, #db6504);
+}
+
+   </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><h1>Welcome</h1></div>
+         <nav class="navbar">
+             <ul>
+                 <li><a href="home.html" class="nav-item home">Home</a></li>
+                 <li><a href="about.html" class="nav-item about">About</a></li>
+                 <li><a href="menu.html" class="nav-item menu">Menu</a></li>
+                 <li><a href="booking.html" class="nav-item booking">Booking</a></li>
+             </ul>
+         </nav>
+     </header>
+     <section class="booking-section" id="booking">
+        <h2>Book Your Event</h2>
+        <p>Fill out the form below to plan your perfect celebration with us!</p>
+        <form action="submit-booking.php" method="post" class="booking-form">
+            <!-- User Information -->
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="event-date">Event Date:</label>
+                <input type="date" id="event-date" name="event_date" required>
+            </div>
+    
+            <!-- Menu Selection -->
+            <div class="form-group">
+                <label for="menu">Select Your Menu:</label>
+                <select id="menu" name="menu" required>
+                    <option value="">Choose a menu</option>
+                    <option value="menu1">Menu 1 (Fast Food)</option>
+                    <option value="menu2">Menu 2 (Desi Foods)</option>
+                    <option value="menu3">Menu 3 (Premium Grilled)</option>
+                </select>
+            </div>
+    
+            <!-- Cake Selection -->
+            <div class="form-group">
+                <label for="cake">Select Your Cake:</label>
+                <select id="cake" name="cake" required>
+                    <option value="">Choose a cake</option>
+                    <option value="chocolate">Chocolate Cake</option>
+                    <option value="vanilla">Vanilla Cake</option>
+                    <option value="red-velvet">Red Velvet Cake</option>
+                    <option value="fruit-cake">Fruit Cake</option>
+                </select>
+            </div>
+    
+            <!-- Additional Notes -->
+            <div class="form-group">
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" name="notes" rows="5" placeholder="Any special requests or details?"></textarea>
+            </div>
+    
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Submit Booking</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Celebrate Life's Moments</h3>
+            <p>Your one-stop platform for hosting events, celebrations, and unforgettable memories.</p>
+            <div class="footer-social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Celebrate Life | Designed by Lishba Nadeem and Marriam Shafiq</p>
+        </div>
+    </footer>
+
+
+    </body>
+    </html>
